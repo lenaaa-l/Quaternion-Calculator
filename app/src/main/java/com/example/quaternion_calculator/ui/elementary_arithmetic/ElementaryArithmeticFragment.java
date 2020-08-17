@@ -181,10 +181,26 @@ public class ElementaryArithmeticFragment extends Fragment {
                     }
 
                     // Show the result
-                    s_result.setText(result.getS() + "");
-                    x_result.setText(result.getX() + "");
-                    y_result.setText(result.getY() + "");
-                    z_result.setText(result.getZ() + "");
+                    // If s, x, y or z is negative -> put parentheses around it
+                    if (result.getS() < 0)
+                        s_result.setText("(" + result.getS() + ")");
+                    else
+                        s_result.setText(result.getS() + "");
+
+                    if (result.getX() < 0)
+                        x_result.setText("(" + result.getX() + ")");
+                    else
+                        x_result.setText(result.getX() + "");
+
+                    if (result.getY() < 0)
+                        y_result.setText("(" + result.getY() + ")");
+                    else
+                        y_result.setText(result.getY() + "");
+
+                    if (result.getZ() < 0)
+                        z_result.setText("(" + result.getZ() + ")");
+                    else
+                        z_result.setText(result.getZ() + "");
                 }
 
             }
