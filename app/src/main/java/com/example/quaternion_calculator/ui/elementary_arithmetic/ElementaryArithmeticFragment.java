@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -91,6 +92,79 @@ public class ElementaryArithmeticFragment extends Fragment {
                 deselect(plus);
                 deselect(minus);
                 deselect(times);
+            }
+        });
+
+        equal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedOperation == ' ')
+                    Toast.makeText(getActivity(), "Select an operation first", Toast.LENGTH_SHORT).show();
+
+                else {
+
+                    // Check for emptiness -> if this is the case enter 0.0 in the box
+                    // Save the values
+                    double s1, x1, y1, z1, s2, x2, y2, z2;
+
+                    if (s_1.getText().toString().isEmpty()) {
+                        s_1.setText("0.0");
+                        s1 = 0;
+                    } else
+                        s1 = Double.parseDouble(s_1.getText().toString());
+
+                    if (s_2.getText().toString().isEmpty()) {
+                        s_2.setText("0.0");
+                        s2 = 0;
+                    } else
+                        s2 = Double.parseDouble(s_2.getText().toString());
+
+                    if (x_1.getText().toString().isEmpty()) {
+                        x_1.setText("0.0");
+                        x1 = 0;
+                    } else
+                        x1 = Double.parseDouble(x_1.getText().toString());
+
+                    if (x_2.getText().toString().isEmpty()) {
+                        x_2.setText("0.0");
+                        x2 = 0;
+                    } else
+                        x2 = Double.parseDouble(x_2.getText().toString());
+
+                    if (y_1.getText().toString().isEmpty()) {
+                        y_1.setText("0.0");
+                        y1 = 0;
+                    } else
+                        y1 = Double.parseDouble(y_1.getText().toString());
+
+                    if (y_2.getText().toString().isEmpty()) {
+                        y_2.setText("0.0");
+                        y2 = 0;
+                    } else
+                        y2 = Double.parseDouble(y_2.getText().toString());
+
+                    if (z_1.getText().toString().isEmpty()) {
+                        z_1.setText("0.0");
+                        z1 = 0;
+                    } else
+                        z1 = Double.parseDouble(z_1.getText().toString());
+
+                    if (z_2.getText().toString().isEmpty()) {
+                        z_2.setText("0.0");
+                        z2 = 0;
+                    } else
+                        z2 = Double.parseDouble(z_2.getText().toString());
+
+                    // Create Quaternions
+
+
+                    // Calculate the result
+                    switch (selectedOperation) {
+                        case '+':
+
+                    }
+                }
+
             }
         });
 
