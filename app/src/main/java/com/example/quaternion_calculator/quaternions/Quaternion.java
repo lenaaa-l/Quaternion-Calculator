@@ -15,6 +15,24 @@ public class Quaternion {
 
     }
 
+    /*
+    Negates the quaternion without returning it --> q -> -q
+     */
+    public void negate() {
+        negateReturn();
+    }
+
+    /*
+    Negates the quaternion and returns it --> q to -q
+     */
+    public Quaternion negateReturn() {
+        s = -s;
+        x = -x;
+        y = -y;
+        z = -z;
+        return this;
+    }
+
     public int getS() {
         return s;
     }
