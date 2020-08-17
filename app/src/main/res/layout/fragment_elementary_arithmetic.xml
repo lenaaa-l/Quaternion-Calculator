@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.elementary_arithmetic.ElementaryArithmeticFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/border_button2"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/elementaryarithmetic"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:fontFamily="@font/ubuntu_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/s_elementary_arithmetic"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/s"
+            android:textColorHint="#7E7575"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <EditText
+            android:id="@+id/x_elementary_arithmetic"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:hint="@string/x"
+            android:textColorHint="#7E7575"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <EditText
+            android:id="@+id/y_elementary_arithmetic"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:hint="@string/y"
+            android:textColorHint="#7E7575"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/j"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <EditText
+            android:id="@+id/z_elementary_arithmetic"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:hint="@string/z"
+            android:textColorHint="#7E7575"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/k"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <Button
+            android:id="@+id/btn_plus_elementary_arithmetic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/border_button"
+            android:text="@string/plus"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40sp"/>
+
+        <Button
+            android:id="@+id/btn_minus_elementary_arithmetic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/border_button"
+            android:text="@string/minus"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp" />
+
+        <Button
+            android:id="@+id/btn_times_elementary_arithmetic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/border_button"
+            android:text="@string/times"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp" />
+
+        <Button
+            android:id="@+id/btn_division_elementary_arithmetic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/border_button"
+            android:text="@string/division"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/s_elementary_arithmetic2"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:hint="@string/s"
+            android:textColorHint="#7E7575"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <EditText
+            android:id="@+id/x_elementary_arithmetic2"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:hint="@string/x"
+            android:textColorHint="#7E7575"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <EditText
+            android:id="@+id/y_elementary_arithmetic2"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:hint="@string/y"
+            android:textColorHint="#7E7575"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/j"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <EditText
+            android:id="@+id/z_elementary_arithmetic2"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:hint="@string/z"
+            android:textColorHint="#7E7575"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/k"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_equals_elementary_arithmetic"
+        android:layout_marginTop="30dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/border_button"
+        android:text="@string/equals"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="40sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:background="#8D7C4DFF"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/s_elementary_arithmetic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:text="@string/_0_0"
+            android:gravity="center_horizontal"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <TextView
+            android:id="@+id/x_elementary_arithmetic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:text="@string/_0_0"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <TextView
+            android:id="@+id/y_elementary_arithmetic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:text="@string/_0_0"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/j"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/plus" />
+
+        <TextView
+            android:id="@+id/z_elementary_arithmetic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:text="@string/_0_0"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/k"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
