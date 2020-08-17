@@ -2,9 +2,9 @@ package com.example.quaternion_calculator.quaternions;
 
 public class Quaternion {
     // q = s + xi + yj + zk
-    private int s, x, y, z;
+    private double s, x, y, z;
 
-    public Quaternion(int s, int x, int y, int z) {
+    public Quaternion(double s, double x, double y, double z) {
         this.s = s;
         this.x = x;
         this.y = y;
@@ -33,35 +33,35 @@ public class Quaternion {
         return this;
     }
 
-    public int getS() {
+    public double getS() {
         return s;
     }
 
-    public void setS(int s) {
+    public void setS(double s) {
         this.s = s;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 
-    public int getZ() {
+    public double getZ() {
         return z;
     }
 
-    public void setZ(int z) {
+    public void setZ(double z) {
         this.z = z;
     }
 }

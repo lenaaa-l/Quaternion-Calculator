@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.quaternion_calculator.R;
+import com.example.quaternion_calculator.quaternions.Quaternion;
 
 public class ElementaryArithmeticFragment extends Fragment {
 
@@ -156,7 +157,8 @@ public class ElementaryArithmeticFragment extends Fragment {
                         z2 = Double.parseDouble(z_2.getText().toString());
 
                     // Create Quaternions
-
+                    Quaternion q1 = new Quaternion(s1, x1, y1, z1);
+                    Quaternion q2 = new Quaternion(s2, x2, y2, z2);
 
                     // Calculate the result
                     switch (selectedOperation) {
