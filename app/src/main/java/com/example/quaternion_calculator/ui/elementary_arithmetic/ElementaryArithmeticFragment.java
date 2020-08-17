@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.quaternion_calculator.R;
 import com.example.quaternion_calculator.quaternions.Quaternion;
+import com.example.quaternion_calculator.quaternions.QuaternionOperation;
 
 public class ElementaryArithmeticFragment extends Fragment {
 
@@ -159,12 +160,31 @@ public class ElementaryArithmeticFragment extends Fragment {
                     // Create Quaternions
                     Quaternion q1 = new Quaternion(s1, x1, y1, z1);
                     Quaternion q2 = new Quaternion(s2, x2, y2, z2);
+                    Quaternion result = new Quaternion();
 
                     // Calculate the result
                     switch (selectedOperation) {
                         case '+':
-
+                            result = QuaternionOperation.add(q1, q2);
+                            break;
+                        case '-':
+                            result = QuaternionOperation.subtract(q1, q2);
+                            break;
+                        case '*':
+                            //TODO
+                            break;
+                        case '/':
+                            //TODO
+                            break;
+                        default:
+                            Toast.makeText(getActivity(), "An error occured, please try it again.", Toast.LENGTH_SHORT).show();
                     }
+
+                    // Show the result
+                    s_result.setText(result.getS() + "");
+                    x_result.setText(result.getX() + "");
+                    y_result.setText(result.getY() + "");
+                    z_result.setText(result.getZ() + "");
                 }
 
             }
