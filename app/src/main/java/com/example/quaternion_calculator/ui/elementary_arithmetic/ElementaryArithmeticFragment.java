@@ -171,7 +171,7 @@ public class ElementaryArithmeticFragment extends Fragment {
                             result = QuaternionOperation.subtract(q1, q2);
                             break;
                         case '*':
-                            //TODO
+                            result = QuaternionOperation.multiply(q1, q2);
                             break;
                         case '/':
                             //TODO
