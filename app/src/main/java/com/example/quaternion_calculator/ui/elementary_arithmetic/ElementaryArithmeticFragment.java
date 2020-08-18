@@ -24,11 +24,12 @@ import com.example.quaternion_calculator.quaternions.QuaternionOperation;
 public class ElementaryArithmeticFragment extends Fragment {
 
     private EditText s_1, x_1, y_1, z_1, s_2, x_2, y_2, z_2;
-    private Button plus, minus, times, division, equal;
+    private Button plus, minus, times, division, equal, division_pq, division_qp;
     private TextView s_result, x_result, y_result, z_result;
-    private Drawable selected, deselected;
+    private Drawable selected, deselected, selectedDivision_pq, deselectedDivision_pq, selectedDivision_qp, deselectedDivision_qp;
 
     private char selectedOperation = ' ';
+    private char selectedDivision = ' ';
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,6 +50,12 @@ public class ElementaryArithmeticFragment extends Fragment {
                 deselect(minus);
                 deselect(times);
                 deselect(division);
+
+                selectedDivision = ' ';
+
+                // Division buttons unvisible
+                division_pq.setVisibility(View.GONE);
+                division_qp.setVisibility(View.GONE);
             }
         });
 
@@ -64,6 +71,12 @@ public class ElementaryArithmeticFragment extends Fragment {
                 deselect(plus);
                 deselect(times);
                 deselect(division);
+
+                selectedDivision = ' ';
+
+                // Division buttons unvisible
+                division_pq.setVisibility(View.GONE);
+                division_qp.setVisibility(View.GONE);
             }
         });
 
@@ -79,6 +92,12 @@ public class ElementaryArithmeticFragment extends Fragment {
                 deselect(plus);
                 deselect(minus);
                 deselect(division);
+
+                selectedDivision = ' ';
+
+                // Division buttons unvisible
+                division_pq.setVisibility(View.GONE);
+                division_qp.setVisibility(View.GONE);
             }
         });
 
@@ -94,6 +113,28 @@ public class ElementaryArithmeticFragment extends Fragment {
                 deselect(plus);
                 deselect(minus);
                 deselect(times);
+
+                // Division buttons visible
+                division_pq.setVisibility(View.VISIBLE);
+                division_qp.setVisibility(View.VISIBLE);
+
+                division_pq.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        division_pq.setBackground(selectedDivision_pq);
+                        division_qp.setBackground(deselectedDivision_qp);
+                        selectedDivision = 'p';
+                    }
+                });
+
+                division_qp.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        division_pq.setBackground(deselectedDivision_pq);
+                        division_qp.setBackground(selectedDivision_qp);
+                        selectedDivision = 'q';
+                    }
+                });
             }
         });
 
@@ -102,7 +143,8 @@ public class ElementaryArithmeticFragment extends Fragment {
             public void onClick(View v) {
                 if (selectedOperation == ' ')
                     Toast.makeText(getActivity(), "Select an operation first", Toast.LENGTH_SHORT).show();
-
+                else if (selectedOperation == '/' && selectedDivision == ' ')
+                    Toast.makeText(getActivity(), "Select the division first", Toast.LENGTH_SHORT).show();
                 else {
 
                     // Check for emptiness -> if this is the case enter 0.0 in the box
@@ -175,6 +217,13 @@ public class ElementaryArithmeticFragment extends Fragment {
                             break;
                         case '/':
                             //TODO
+                            if (selectedDivision == 'p'){
+
+                            } else if (selectedDivision == 'q'){
+
+                            } else{
+                                Toast.makeText(getActivity(), "An error occured, please try it again.", Toast.LENGTH_SHORT).show();
+                            }
                             break;
                         default:
                             Toast.makeText(getActivity(), "An error occured, please try it again.", Toast.LENGTH_SHORT).show();
@@ -256,8 +305,21 @@ public class ElementaryArithmeticFragment extends Fragment {
         y_result = root.findViewById(R.id.y_elementary_arithmetic3);
         z_result = root.findViewById(R.id.z_elementary_arithmetic3);
 
-        // Backgrounds
+        // Buttons for division
+        division_pq = root.findViewById(R.id.pqMinus1);
+        division_qp = root.findViewById(R.id.qMinus1p);
+
+        // Backgrounds for operations
         deselected = ContextCompat.getDrawable(this.getActivity(), R.drawable.border_button_deselected);
         selected = ContextCompat.getDrawable(this.getActivity(), R.drawable.border_button_selected);
+
+        // Backgrounds for division
+        selectedDivision_pq = ContextCompat.getDrawable(this.getActivity(), R.drawable.pq_division_selected);
+        selectedDivision_qp = ContextCompat.getDrawable(this.getActivity(), R.drawable.qp_division_selected);
+        deselectedDivision_pq = ContextCompat.getDrawable(this.getActivity(), R.drawable.pq_division);
+        deselectedDivision_qp = ContextCompat.getDrawable(this.getActivity(), R.drawable.qp_division);
+
+        division_pq.setVisibility(View.GONE);
+        division_qp.setVisibility(View.GONE);
     }
 }

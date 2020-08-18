@@ -328,17 +328,42 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_equals_elementary_arithmetic"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginTop="20dp"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/border_button_deselected"
-        android:text="@string/equals"
-        android:textColor="@android:color/white"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="40sp"/>
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/pqMinus1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/pq_division"
+            android:layout_marginEnd="30dp" />
+
+        <Button
+            android:id="@+id/btn_equals_elementary_arithmetic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/border_button_deselected"
+            android:text="@string/equals"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40sp"/>
+
+        <Button
+            android:id="@+id/qMinus1p"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/qp_division"
+            android:layout_marginStart="30dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
