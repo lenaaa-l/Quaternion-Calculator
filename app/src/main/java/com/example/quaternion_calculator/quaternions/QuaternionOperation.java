@@ -1,8 +1,10 @@
 package com.example.quaternion_calculator.quaternions;
 
 public class QuaternionOperation {
-    /*
-    Add two quaternions a, b and return the result
+    /**
+     * @param a First quaternion
+     * @param b Second quaternion
+     * @return Sum of a and b
      */
     public static Quaternion add(Quaternion a, Quaternion b) {
         return new Quaternion(
@@ -13,15 +15,19 @@ public class QuaternionOperation {
         );
     }
 
-    /*
-    Subtract two quaternions a, b and return the result
+    /**
+     * @param a First quaternion
+     * @param b Second quaternion
+     * @return Difference of a and b
      */
     public static Quaternion subtract(Quaternion a, Quaternion b) {
-        return add(a, b.negateReturn());
+        return add(a, b.negate());
     }
 
-    /*
-    Multiply two quaternions a, b and return the result
+    /**
+     * @param a First quaternion
+     * @param b Second quaternion
+     * @return Product of a and b
      */
     public static Quaternion multiply(Quaternion a, Quaternion b) {
         double s = a.getS() * b.getS() - a.getX() * b.getX() - a.getY() * b.getY() - a.getZ() * b.getZ();

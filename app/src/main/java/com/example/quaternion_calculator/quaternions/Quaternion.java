@@ -1,5 +1,8 @@
 package com.example.quaternion_calculator.quaternions;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 public class Quaternion {
     // q = s + xi + yj + zk
     private double s, x, y, z;
@@ -15,22 +18,46 @@ public class Quaternion {
 
     }
 
-    /*
-    Negates the quaternion without returning it --> q -> -q
+    /**
+     * @return Negated quaternion (q --> -q)
      */
-    public void negate() {
-        negateReturn();
-    }
-
-    /*
-    Negates the quaternion and returns it --> q to -q
-     */
-    public Quaternion negateReturn() {
+    public Quaternion negate() {
         s = -s;
         x = -x;
         y = -y;
         z = -z;
         return this;
+    }
+
+    /**
+     * @return Conjugated quaternion
+     */
+    public Quaternion conjugate(){
+        x = -x;
+        y = -y;
+        z = -z;
+        return this;
+    }
+
+    /**
+     * @return Norm of the quaternion
+     */
+    public double norm(){
+        return Math.sqrt(s*s + x*x + y*y + z*z);
+    }
+
+    /**
+     * @return Reciprocal of the quaternion
+     */
+    public Quaternion reciprocal(){
+        double normSquare = Math.pow(norm(), 2);
+        Quaternion conjugated = conjugate();
+        double s_reciprocal = conjugated.s / normSquare;
+        double x_reciprocal = conjugated.x / normSquare;
+        double y_reciprocal = conjugated.y / normSquare;
+        double z_reciprocal = conjugated.z / normSquare;
+
+        return new Quaternion(s_reciprocal, x_reciprocal, y_reciprocal, z_reciprocal);
     }
 
     public double getS() {
@@ -63,5 +90,23 @@ public class Quaternion {
 
     public void setZ(double z) {
         this.z = z;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (obj == null)
+            return false;
+        if (!(obj instanceof Quaternion))
+            return false;
+        Quaternion q = (Quaternion) obj;
+        if (q.getS() != s || q.getX() != x || q.getY() != y || q.getZ() != z)
+            return false;
+        return true;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return s + " + " + x + " · i + " + y + " · j + " + z + " · k";
     }
 }
