@@ -330,7 +330,7 @@
 
     <Button
         android:id="@+id/btn_equals_elementary_arithmetic"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:background="@drawable/border_button_deselected"
@@ -340,14 +340,13 @@
         android:gravity="center"
         android:textSize="40sp"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="20dp"
+        android:layout_marginTop="20dp"
         android:background="#8D7C4DFF"
-        android:layout_marginTop="30dp"
+        android:padding="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_gravity="center_horizontal"
@@ -393,56 +392,69 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_black_24dp"
             android:layout_gravity="center"
-            android:contentDescription="@string/plus" />
+            android:contentDescription="@string/plus"
+            android:src="@drawable/ic_add_black_24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#8D7C4DFF"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/y_elementary_arithmetic3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:textSize="28sp"
-            android:text="@string/_0_0"
-            android:gravity="center_horizontal"
+            android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"/>
+            android:gravity="center_horizontal"
+            android:text="@string/_0_0"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
             android:text="@string/j"
             android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp" />
+            android:textSize="25sp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_black_24dp"
             android:layout_gravity="center"
-            android:contentDescription="@string/plus" />
+            android:contentDescription="@string/plus"
+            android:src="@drawable/ic_add_black_24dp" />
 
         <TextView
             android:id="@+id/z_elementary_arithmetic3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:textSize="28sp"
-            android:text="@string/_0_0"
-            android:gravity="center_horizontal"
+            android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"/>
+            android:gravity="center_horizontal"
+            android:text="@string/_0_0"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:text="@string/k"
             android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:layout_gravity="center_vertical" />
+            android:textSize="25sp" />
 
     </LinearLayout>
 
