@@ -216,7 +216,6 @@ public class ElementaryArithmeticFragment extends Fragment {
                             result = QuaternionOperation.multiply(q1, q2);
                             break;
                         case '/':
-                            //TODO
                             if (selectedDivision == 'p'){
                                 result = QuaternionOperation.divide_a_b_1(q1, q2);
                             } else if (selectedDivision == 'q'){
@@ -231,31 +230,42 @@ public class ElementaryArithmeticFragment extends Fragment {
 
                     // Show the result
                     // If s, x, y or z is negative -> put parentheses around it
+                    // Only display two decimal places --> round
                     if (result.getS() < 0)
-                        s_result.setText("(" + result.getS() + ")");
+                        s_result.setText("(" + roundHelper(result.getS(),2) + ")");
                     else
-                        s_result.setText(result.getS() + "");
+                        s_result.setText(roundHelper(result.getS(), 2) + "");
 
                     if (result.getX() < 0)
-                        x_result.setText("(" + result.getX() + ")");
+                        x_result.setText("(" + roundHelper(result.getX(), 2) + ")");
                     else
-                        x_result.setText(result.getX() + "");
+                        x_result.setText(roundHelper(result.getX(), 2) + "");
 
                     if (result.getY() < 0)
-                        y_result.setText("(" + result.getY() + ")");
+                        y_result.setText("(" + roundHelper(result.getY(), 2) + ")");
                     else
-                        y_result.setText(result.getY() + "");
+                        y_result.setText(roundHelper(result.getY(), 2) + "");
 
                     if (result.getZ() < 0)
-                        z_result.setText("(" + result.getZ() + ")");
+                        z_result.setText("(" + roundHelper(result.getZ(), 2) + ")");
                     else
-                        z_result.setText(result.getZ() + "");
+                        z_result.setText(roundHelper(result.getZ(), 2) + "");
                 }
 
             }
         });
 
         return root;
+    }
+
+    /**
+     * @param value Value to be rounded
+     * @param decimalPlaces number of decimal places
+     * @return rounded value
+     */
+    private double roundHelper(double value, int decimalPlaces){
+        double t = Math.pow(10, decimalPlaces);
+        return Math.round(value*t) / t;
     }
 
     /*
