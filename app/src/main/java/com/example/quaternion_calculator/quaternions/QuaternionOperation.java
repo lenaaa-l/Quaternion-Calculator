@@ -36,4 +36,22 @@ public class QuaternionOperation {
         double z = a.getS() * b.getZ() + a.getX() * b.getY() - a.getY() * b.getX() + a.getZ() * b.getS();
         return new Quaternion(s, x, y, z);
     }
+
+    /**
+     * @param a First quaternion
+     * @param b Second quaternion
+     * @return Quotient of a and b --> The quotient is a * b^{-1}
+     */
+    public static Quaternion divide_a_b_1(Quaternion a, Quaternion b){
+        return multiply(a, b.reciprocal());
+    }
+
+    /**
+     * @param a First quaternion
+     * @param b Second quaternion
+     * @return Quotient of a and b --> The quotient is b^{-1} * a
+     */
+    public static Quaternion divide_b_1_a(Quaternion a, Quaternion b){
+        return multiply(b.reciprocal(), a);
+    }
 }

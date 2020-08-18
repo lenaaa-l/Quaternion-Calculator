@@ -218,9 +218,9 @@ public class ElementaryArithmeticFragment extends Fragment {
                         case '/':
                             //TODO
                             if (selectedDivision == 'p'){
-
+                                result = QuaternionOperation.divide_a_b_1(q1, q2);
                             } else if (selectedDivision == 'q'){
-
+                                result = QuaternionOperation.divide_b_1_a(q1, q2);
                             } else{
                                 Toast.makeText(getActivity(), "An error occured, please try it again.", Toast.LENGTH_SHORT).show();
                             }
