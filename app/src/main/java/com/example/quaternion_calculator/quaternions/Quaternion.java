@@ -22,21 +22,14 @@ public class Quaternion {
      * @return Negated quaternion (q --> -q)
      */
     public Quaternion negate() {
-        s = -s;
-        x = -x;
-        y = -y;
-        z = -z;
-        return this;
+        return new Quaternion(-s, -x, -y, -z);
     }
 
     /**
-     * @return Conjugated quaternion
+     * @return Return conjugated quaternion
      */
     public Quaternion conjugate(){
-        x = -x;
-        y = -y;
-        z = -z;
-        return this;
+        return new Quaternion(s, -x, -y, -z);
     }
 
     /**
@@ -107,6 +100,13 @@ public class Quaternion {
     @NonNull
     @Override
     public String toString() {
-        return s + " + " + x + " · i + " + y + " · j + " + z + " · k";
+        String temp = "" + s;
+        temp += (x < 0) ? " - " : " + ";
+        temp += Math.abs(x) + " · i";
+        temp += (y < 0) ? " - " : " + ";
+        temp += Math.abs(y) + " · j";
+        temp += (z < 0) ? " - " : " + ";
+        temp += Math.abs(z) + " · k";
+        return temp;
     }
 }
