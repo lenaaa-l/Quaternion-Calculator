@@ -26,4 +26,11 @@
     <string name="z">z</string>
     <string name="elementaryarithmetic">\nEnter two quaternions, choose the elementary operation and confirm the selection by pressing \'=\'\n</string>
     <string name="features_text">Enter a quaternion to get a list of its features</string>
+    <string name="conjugate">Conjugate:</string>
+    <string name="real_part">Real part:</string>
+    <string name="imaginary_part">Imaginary part:</string>
+    <string name="open_bracket">(</string>
+    <string name="closed_bracket">)</string>
+    <string name="norm">Norm:</string>
+    <string name="reciprocal">Reciprocal:</string>
 </resources>
