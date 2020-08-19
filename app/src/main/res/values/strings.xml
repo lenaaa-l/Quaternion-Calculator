@@ -7,7 +7,7 @@
     <string name="action_github">GitHub</string>
 
     <string name="menu_elementary_arithmetic">Elementary Arithmetic</string>
-    <string name="menu_gallery">Gallery</string>
+    <string name="menu_features">Features</string>
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
@@ -25,4 +25,5 @@
     <string name="y">y</string>
     <string name="z">z</string>
     <string name="elementaryarithmetic">\nEnter two quaternions, choose the elementary operation and confirm the selection by pressing \'=\'\n</string>
+    <string name="features_text">Enter a quaternion to get a list of its features</string>
 </resources>
