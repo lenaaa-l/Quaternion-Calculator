@@ -268,8 +268,9 @@ public class ElementaryArithmeticFragment extends Fragment {
         return Math.round(value*t) / t;
     }
 
-    /*
-    Deselect a button by changing its background and text color
+    /**
+     * Deselect a button by changing its background and text color
+     * @param btn button
      */
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void deselect(Button btn) {
@@ -277,8 +278,9 @@ public class ElementaryArithmeticFragment extends Fragment {
         btn.setTextColor(Color.WHITE);
     }
 
-    /*
-    Select a button by changing its background and text color
+    /**
+     * Select a button by changing its background and text color
+     * @param btn button
      */
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void select(Button btn) {
