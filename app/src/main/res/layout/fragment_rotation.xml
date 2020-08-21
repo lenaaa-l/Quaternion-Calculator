@@ -301,7 +301,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/btn_enter_features"
+        android:id="@+id/btn_enter_rotation"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:background="@drawable/ic_baseline_check_box_24"
