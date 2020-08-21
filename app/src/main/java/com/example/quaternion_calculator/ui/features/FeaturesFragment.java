@@ -18,7 +18,7 @@ public class FeaturesFragment extends Fragment {
 
     private EditText s, x, y, z;
     private ImageButton confirm;
-    private TextView real_part, x_imaginary_part, y_imaginary_part, z_imaginary_part,  open_bracket, closed_bracket, conjugate, norm, reciprocal;
+    private TextView real_part, x_imaginary_part, y_imaginary_part, z_imaginary_part, open_bracket, closed_bracket, conjugate, norm, reciprocal, normalized;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -87,6 +87,9 @@ public class FeaturesFragment extends Fragment {
                 r.setY(roundHelper(r.getY(), 2));
                 r.setZ(roundHelper(r.getZ(), 2));
                 reciprocal.setText(r.toString());
+
+                // Normalized
+                normalized.setText(q.normalize().toString());
             }
         });
 
@@ -123,6 +126,7 @@ public class FeaturesFragment extends Fragment {
         conjugate = root.findViewById(R.id.conjugate_features);
         norm = root.findViewById(R.id.norm_features);
         reciprocal = root.findViewById(R.id.reciprocal_features);
+        normalized = root.findViewById(R.id.normalized_features);
 
         // Univisible brackets
         open_bracket.setVisibility(View.GONE);

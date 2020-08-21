@@ -42,7 +42,7 @@ public class Quaternion {
     /**
      * @return Reciprocal of the quaternion
      */
-    public Quaternion reciprocal(){
+    public Quaternion reciprocal() {
         double normSquare = Math.pow(norm(), 2);
         Quaternion conjugated = conjugate();
         double s_reciprocal = conjugated.s / normSquare;
@@ -51,6 +51,14 @@ public class Quaternion {
         double z_reciprocal = conjugated.z / normSquare;
 
         return new Quaternion(s_reciprocal, x_reciprocal, y_reciprocal, z_reciprocal);
+    }
+
+    /**
+     * @return Normalized quaternion
+     */
+    public Quaternion normalize() {
+        double norm = norm();
+        return new Quaternion(s / norm, x / norm, y / norm, z / norm);
     }
 
     public double getS() {
@@ -92,9 +100,7 @@ public class Quaternion {
         if (!(obj instanceof Quaternion))
             return false;
         Quaternion q = (Quaternion) obj;
-        if (q.getS() != s || q.getX() != x || q.getY() != y || q.getZ() != z)
-            return false;
-        return true;
+        return q.getS() == s && q.getX() == x && q.getY() == y && q.getZ() == z;
     }
 
     @NonNull
