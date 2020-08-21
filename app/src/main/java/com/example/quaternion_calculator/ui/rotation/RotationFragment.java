@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -38,20 +39,49 @@ public class RotationFragment extends Fragment {
                 // Result layout visible
                 result.setVisibility(View.VISIBLE);
 
+                // Get values
                 Quaternion point_quaternion = readPoint();
                 Vector<Double> rotation_axis = readAxis();
                 double alpha = readAngle();
 
-                Quaternion result = QuaternionOperation.rotate(point_quaternion, rotation_axis, alpha);
+                if (rotation_axis.get(0) == 0 && rotation_axis.get(1) == 0 && rotation_axis.get(2) == 0) {
+                    Toast.makeText(getActivity(), "Rotation axis can't be the zero vector", Toast.LENGTH_SHORT).show();
+                } else {
 
-                x_new_point.setText("" + roundHelper(result.getX(), 2));
-                y_new_point.setText("" + roundHelper(result.getY(), 2));
-                z_new_point.setText("" + roundHelper(result.getZ(), 2));
+                    // Normalize vector
+                    rotation_axis = normalize(rotation_axis);
+
+                    // Calculate result
+                    Quaternion result = QuaternionOperation.rotate(point_quaternion, rotation_axis, alpha);
+
+                    // Show result
+                    x_new_point.setText("" + roundHelper(result.getX(), 2));
+                    y_new_point.setText("" + roundHelper(result.getY(), 2));
+                    z_new_point.setText("" + roundHelper(result.getZ(), 2));
+                }
             }
         });
 
 
         return root;
+    }
+
+    /**
+     * Normalize a vector by multiplying each element with 1/norm
+     *
+     * @param rotation_axis vector to be normalized
+     * @return normalized vector
+     */
+    private Vector<Double> normalize(Vector<Double> rotation_axis) {
+        double norm = Math.sqrt(Math.pow(rotation_axis.get(0), 2) + Math.pow(rotation_axis.get(1), 2) +
+                Math.pow(rotation_axis.get(2), 2));
+
+        Vector<Double> normalized_vector = new Vector<>();
+        normalized_vector.add((1 / norm) * rotation_axis.get(0));
+        normalized_vector.add((1 / norm) * rotation_axis.get(1));
+        normalized_vector.add((1 / norm) * rotation_axis.get(2));
+
+        return normalized_vector;
     }
 
     /**

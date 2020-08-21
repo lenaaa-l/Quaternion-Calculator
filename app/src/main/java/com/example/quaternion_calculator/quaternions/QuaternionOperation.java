@@ -57,6 +57,12 @@ public class QuaternionOperation {
         return multiply(b.reciprocal(), a);
     }
 
+    /**
+     * @param q     Quaternion of the point to be rotated
+     * @param r     Rotation axis
+     * @param alpha angle in degree
+     * @return
+     */
     public static Quaternion getRotationOperator(Quaternion q, Vector<Double> r, double alpha) {
         alpha = Math.toRadians(alpha);
         double s = Math.cos(alpha / 2);
@@ -66,6 +72,14 @@ public class QuaternionOperation {
         return new Quaternion(s, x, y, z);
     }
 
+    /**
+     * Rotate a quaternion counterclockwise
+     *
+     * @param q     Quaternion of the point to be rotated
+     * @param r     Rotation axis
+     * @param alpha angle in degrees
+     * @return
+     */
     public static Quaternion rotate(Quaternion q, Vector<Double> r, final double alpha) {
         Quaternion rotation_operator = getRotationOperator(q, r, alpha);
         Quaternion temp = multiply(rotation_operator, q);
