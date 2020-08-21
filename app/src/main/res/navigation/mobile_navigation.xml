@@ -36,8 +36,8 @@
         tools:layout="@layout/fragment_features" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.quaternion_calculator.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_rotation"
+        android:name="com.example.quaternion_calculator.ui.rotation.RotationFragment"
+        android:label="@string/menu_rotation"
+        tools:layout="@layout/fragment_rotation" />
 </navigation>
