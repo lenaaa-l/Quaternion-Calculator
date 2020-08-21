@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -60,7 +59,7 @@ public class FeaturesFragment extends Fragment {
                 } else
                     z_value = Double.parseDouble(z.getText().toString());
 
-                // Create Quaternions
+                // Create Quaternion
                 Quaternion q = new Quaternion(s_value, x_value, y_value, z_value);
 
                 // Set brackets to visible

@@ -10,12 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.quaternion_calculator.R;
+import com.example.quaternion_calculator.quaternions.Quaternion;
 
 public class RotationFragment extends Fragment {
 
@@ -30,6 +28,40 @@ public class RotationFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_rotation, container, false);
 
         init(root);
+
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Result layout visible
+                result.setVisibility(View.VISIBLE);
+
+                // Read point
+                // Check for emptiness -> if this is the case enter 0.0 in the box
+                // Save the values
+                double x_p, y_p, z_p;
+
+                if (x_point.getText().toString().isEmpty()) {
+                    x_point.setText("0.0");
+                    x_p = 0;
+                } else
+                    x_p = Double.parseDouble(x_point.getText().toString());
+
+                if (y_point.getText().toString().isEmpty()) {
+                    y_point.setText("0.0");
+                    y_p = 0;
+                } else
+                    y_p = Double.parseDouble(y_point.getText().toString());
+
+                if (z_point.getText().toString().isEmpty()) {
+                    z_point.setText("0.0");
+                    z_p = 0;
+                } else
+                    z_p = Double.parseDouble(z_point.getText().toString());
+
+                // Create Quaternion
+                Quaternion q = new Quaternion(0, x_p, y_p, z_p);
+            }
+        });
 
 
         return root;
