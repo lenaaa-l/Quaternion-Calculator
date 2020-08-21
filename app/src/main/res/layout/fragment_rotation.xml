@@ -1,10 +1,417 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
     tools:context=".ui.rotation.RotationFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/border_button2"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/rotation_text"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:fontFamily="@font/ubuntu_light" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/point"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/p"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_bracket"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/x_point_rotation"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/x"
+            android:textColorHint="#7E7575"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/semicolon"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp" />
+
+        <EditText
+            android:id="@+id/y_point_rotation"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:hint="@string/y"
+            android:textColorHint="#7E7575"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/semicolon"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp" />
+
+        <EditText
+            android:id="@+id/z_point_rotation"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberDecimal"
+            android:hint="@string/z"
+            android:textColorHint="#7E7575"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/closed_bracket"
+            android:textSize="28sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rotation_axis"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/openbracket_features"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/open_bracket"
+            android:textColor="@android:color/white"
+            android:textSize="100sp"
+            app:fontFamily="sans-serif-thin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp">
+
+            <EditText
+                android:id="@+id/x_rotation_axis"
+                android:layout_width="65sp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/x"
+                android:textColorHint="#7E7575"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:text="@string/_0_0"
+                android:ems="4"
+                android:gravity="center_horizontal"
+                android:backgroundTint="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/y_rotation_axis"
+                android:layout_width="65sp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/y"
+                android:textColorHint="#7E7575"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:text="@string/_0_0"
+                android:ems="4"
+                android:gravity="center_horizontal"
+                android:backgroundTint="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/z_rotation_axis"
+                android:layout_width="65sp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/z"
+                android:textColorHint="#7E7575"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:text="@string/_0_0"
+                android:ems="4"
+                android:gravity="center_horizontal"
+                android:backgroundTint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/closedbracket_features"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="@string/closed_bracket"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="100sp"
+            app:fontFamily="sans-serif-thin"
+            android:layout_marginStart="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/angle"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alpha"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equals"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/angle_rotation"
+            android:layout_width="65sp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/x"
+            android:textColorHint="#7E7575"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"
+            android:ems="4"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_enter_features"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/ic_baseline_check_box_24"
+        android:text="@string/equals"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="40sp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_new_point_rotation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/point"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/p"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dash"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="4dp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_bracket"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/x2_point_rotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/semicolon"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/y2_point_rotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/semicolon"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/z2_point_rotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:text="@string/_0_0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/closed_bracket"
+            android:textSize="28sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>

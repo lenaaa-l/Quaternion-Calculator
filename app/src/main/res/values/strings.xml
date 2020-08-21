@@ -33,4 +33,13 @@
     <string name="closed_bracket">)</string>
     <string name="norm">Norm:</string>
     <string name="reciprocal">Reciprocal:</string>
+    <string name="rotation_text">Enter the point, the rotation axis and the angle by which the point is to be rotated around the axis counterclockwise</string>
+    <string name="point">Point:</string>
+    <string name="p">P</string>
+    <string name="semicolon">;</string>
+    <string name="rotation_axis">Rotation axis:</string>
+    <string name="angle">Angle:</string>
+    <string name="alpha">α</string>
+    <string name="degree">°</string>
+    <string name="dash">\'</string>
 </resources>
