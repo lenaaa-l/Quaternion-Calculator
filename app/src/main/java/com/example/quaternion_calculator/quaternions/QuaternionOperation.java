@@ -1,5 +1,7 @@
 package com.example.quaternion_calculator.quaternions;
 
+import java.util.Vector;
+
 public class QuaternionOperation {
     /**
      * @param a First quaternion
@@ -51,7 +53,22 @@ public class QuaternionOperation {
      * @param b Second quaternion
      * @return Quotient of a and b --> The quotient is b^{-1} * a
      */
-    public static Quaternion divide_b_1_a(Quaternion a, Quaternion b){
+    public static Quaternion divide_b_1_a(Quaternion a, Quaternion b) {
         return multiply(b.reciprocal(), a);
+    }
+
+    public static Quaternion getRotationOperator(Quaternion q, Vector<Double> r, double alpha) {
+        alpha = Math.toRadians(alpha);
+        double s = Math.cos(alpha / 2);
+        double x = Math.sin(alpha / 2) * r.get(0);
+        double y = Math.sin(alpha / 2) * r.get(1);
+        double z = Math.sin(alpha / 2) * r.get(2);
+        return new Quaternion(s, x, y, z);
+    }
+
+    public static Quaternion rotate(Quaternion q, Vector<Double> r, final double alpha) {
+        Quaternion rotation_operator = getRotationOperator(q, r, alpha);
+        Quaternion temp = multiply(rotation_operator, q);
+        return multiply(temp, rotation_operator.reciprocal());
     }
 }

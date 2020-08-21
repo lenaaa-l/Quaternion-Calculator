@@ -279,7 +279,7 @@
             android:layout_width="65sp"
             android:layout_height="wrap_content"
             android:autofillHints=""
-            android:hint="@string/x"
+            android:hint="@string/alpha"
             android:textColorHint="#7E7575"
             android:inputType="numberDecimal"
             android:textColor="@android:color/white"

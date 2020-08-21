@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.quaternion_calculator.R;
 import com.example.quaternion_calculator.quaternions.Quaternion;
+import com.example.quaternion_calculator.quaternions.QuaternionOperation;
 
 import java.util.Vector;
 
@@ -39,11 +40,38 @@ public class RotationFragment extends Fragment {
 
                 Quaternion point_quaternion = readPoint();
                 Vector<Double> rotation_axis = readAxis();
+                double alpha = readAngle();
+
+                Quaternion result = QuaternionOperation.rotate(point_quaternion, rotation_axis, alpha);
+
+                x_new_point.setText("" + roundHelper(result.getX(), 2));
+                y_new_point.setText("" + roundHelper(result.getY(), 2));
+                z_new_point.setText("" + roundHelper(result.getZ(), 2));
             }
         });
 
 
         return root;
+    }
+
+    /**
+     * @param value         Value to be rounded
+     * @param decimalPlaces number of decimal places
+     * @return rounded value
+     */
+    private double roundHelper(double value, int decimalPlaces) {
+        double t = Math.pow(10, decimalPlaces);
+        return Math.round(value * t) / t;
+    }
+
+    private double readAngle() {
+        double alpha = 0.0;
+        if (angle.getText().toString().isEmpty())
+            angle.setText("0.0");
+        else
+            alpha = Double.parseDouble(angle.getText().toString());
+
+        return alpha;
     }
 
     /**
