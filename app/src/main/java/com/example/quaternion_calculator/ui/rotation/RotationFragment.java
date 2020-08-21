@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import com.example.quaternion_calculator.R;
 import com.example.quaternion_calculator.quaternions.Quaternion;
 
+import java.util.Vector;
+
 public class RotationFragment extends Fragment {
 
     private EditText x_point, y_point, z_point, x_axis, y_axis, z_axis, angle;
@@ -35,36 +37,79 @@ public class RotationFragment extends Fragment {
                 // Result layout visible
                 result.setVisibility(View.VISIBLE);
 
-                // Read point
-                // Check for emptiness -> if this is the case enter 0.0 in the box
-                // Save the values
-                double x_p, y_p, z_p;
-
-                if (x_point.getText().toString().isEmpty()) {
-                    x_point.setText("0.0");
-                    x_p = 0;
-                } else
-                    x_p = Double.parseDouble(x_point.getText().toString());
-
-                if (y_point.getText().toString().isEmpty()) {
-                    y_point.setText("0.0");
-                    y_p = 0;
-                } else
-                    y_p = Double.parseDouble(y_point.getText().toString());
-
-                if (z_point.getText().toString().isEmpty()) {
-                    z_point.setText("0.0");
-                    z_p = 0;
-                } else
-                    z_p = Double.parseDouble(z_point.getText().toString());
-
-                // Create Quaternion
-                Quaternion q = new Quaternion(0, x_p, y_p, z_p);
+                Quaternion point_quaternion = readPoint();
+                Vector<Double> rotation_axis = readAxis();
             }
         });
 
 
         return root;
+    }
+
+    /**
+     * Get the values of the axis (x,y,z)
+     * If an edit-text is empty, insert 0
+     *
+     * @return Vektor (x, y, z)
+     */
+    private Vector<Double> readAxis() {
+        double x_a, y_a, z_a;
+
+        if (x_axis.getText().toString().isEmpty()) {
+            x_axis.setText("0.0");
+            x_a = 0;
+        } else
+            x_a = Double.parseDouble(x_axis.getText().toString());
+
+        if (y_axis.getText().toString().isEmpty()) {
+            y_axis.setText("0.0");
+            y_a = 0;
+        } else
+            y_a = Double.parseDouble(y_axis.getText().toString());
+
+        if (z_axis.getText().toString().isEmpty()) {
+            z_axis.setText("0.0");
+            z_a = 0;
+        } else
+            z_a = Double.parseDouble(z_axis.getText().toString());
+
+        Vector<Double> a = new Vector();
+        a.add(x_a);
+        a.add(y_a);
+        a.add(z_a);
+
+        return a;
+    }
+
+    /**
+     * Get the values of the point (x,y,z)
+     * If an edit-text is empty, insert 0
+     *
+     * @return new quaternion (0, x, y, z)
+     */
+    private Quaternion readPoint() {
+        double x_p, y_p, z_p;
+
+        if (x_point.getText().toString().isEmpty()) {
+            x_point.setText("0.0");
+            x_p = 0;
+        } else
+            x_p = Double.parseDouble(x_point.getText().toString());
+
+        if (y_point.getText().toString().isEmpty()) {
+            y_point.setText("0.0");
+            y_p = 0;
+        } else
+            y_p = Double.parseDouble(y_point.getText().toString());
+
+        if (z_point.getText().toString().isEmpty()) {
+            z_point.setText("0.0");
+            z_p = 0;
+        } else
+            z_p = Double.parseDouble(z_point.getText().toString());
+
+        // Create Quaternion
+        return new Quaternion(0, x_p, y_p, z_p);
     }
 
     private void init(View root) {
