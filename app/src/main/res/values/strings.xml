@@ -43,4 +43,5 @@
     <string name="degree">°</string>
     <string name="dash">\'</string>
     <string name="new_point">New point:</string>
+    <string name="normalized_quaternion">Normalized quaternion:</string>
 </resources>
