@@ -61,7 +61,7 @@ public class QuaternionOperation {
      * @param q     Quaternion of the point to be rotated
      * @param r     Rotation axis
      * @param alpha angle in degree
-     * @return
+     * @return rotation operator
      */
     public static Quaternion getRotationOperator(Quaternion q, Vector<Double> r, double alpha) {
         alpha = Math.toRadians(alpha);

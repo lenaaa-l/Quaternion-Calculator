@@ -106,13 +106,23 @@ public class Quaternion {
     @NonNull
     @Override
     public String toString() {
-        String temp = "" + s;
+        String temp = "" + roundHelper(s, 2);
         temp += (x < 0) ? " - " : " + ";
-        temp += Math.abs(x) + " · i";
+        temp += roundHelper(Math.abs(x), 2) + " · i";
         temp += (y < 0) ? " - " : " + ";
-        temp += Math.abs(y) + " · j";
+        temp += roundHelper(Math.abs(y), 2) + " · j";
         temp += (z < 0) ? " - " : " + ";
-        temp += Math.abs(z) + " · k";
+        temp += roundHelper(Math.abs(z), 2) + " · k";
         return temp;
+    }
+
+    /**
+     * @param value         Value to be rounded
+     * @param decimalPlaces number of decimal places
+     * @return rounded value
+     */
+    private double roundHelper(double value, int decimalPlaces) {
+        double t = Math.pow(10, decimalPlaces);
+        return Math.round(value * t) / t;
     }
 }
