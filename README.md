@@ -37,6 +37,8 @@ Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist 
 
 Hier ein Screenshot der Seite:
 
+<img src="https://user-images.githubusercontent.com/56199607/92325919-7e948780-f04e-11ea-9062-182f6ba7e9b1.png" width="200">
+
 
 
 # Calculator for quaternions
