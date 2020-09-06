@@ -34,11 +34,23 @@ Die Koeffizienten des Konjugierten, des Inversen und des normierten Quaternions 
 
 Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist diese Seite folgendermaßen:
 - [x] Es wird auf leere Eingabefelder geprüft und diese mit "0.0" gefüllt
+- [x] Die Eingabefelder sind so eingestellt, dass man in sie lediglich Zahlen und höchstens einen Punkt eingeben kann
 
 Hier ein Screenshot der Seite:
 
 <img src="https://user-images.githubusercontent.com/56199607/92325919-7e948780-f04e-11ea-9062-182f6ba7e9b1.png" width="200">
 
+## Rotation (Rotation) 
+Der Nutzer gibt einen Punkt im dreidimensionalen Koordinatensystem, eine Rotationsachse, um die der Punkt gedreht werden soll (als dreidimensionaler Vektor) und den Winkel in Grad, um den der Punkt gegen den Uhrzeigersinn gedreht werden soll an. Durch einen Klick auf den Häckchen-Button bekommt der Nutzer die Koordinaten des neuen Punkts P' ausgegeben. 
+
+Für die Rechnung wird als Rotationsachse ein normierter Vektor benötigt. Aus diesem Grund wird als erster Schritt der eingegebene Vektor normiert. Anschließend wird der passende Rotationsoperator r ausgerechnet und der eingegebene Punkt P(x; y; z) als Quaternion q = xi + yj + zk dargestellt. Die Multiplikation r*q*r^{-1} liefert dann das Quaternion p' = x'i + y'j + z'k. Dies entspricht dem Ergebnispunkt P'(x'; y'; z').
+
+Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist diese Seite folgendermaßen:
+- [x] Es wird auf leere Eingabefelder geprüft und diese mit "0.0" gefüllt (alle Eingabefelder)
+- [x] Es wird geprüft, ob die Rotationsachse der Nullvektor ist. Ist dies der Fall, bekommt der Nutzer eine Meldung mit der Nachricht, eine andere Rotationsachse einzugeben
+- [x] Die Eingabefelder sind so eingestellt, dass man in sie lediglich Zahlen und höchstens einen Punkt eingeben kann
+
+Hier ein Screenshot der Seite:
 
 
 # Calculator for quaternions
