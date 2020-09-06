@@ -4,7 +4,7 @@ Die Taschenrechner-App besteht aus drei Reitern, die in der Navigationsleiste au
 Der Nutzer gibt zwei Quaternionen ein. Dabei sind die Koeffizienten double-Werte, das heißt Fließkommazahlen. 
 Anschließend wählt der Nutzer eine Rechenoperation aus. Der Button zur ausgewählten Operation wird farblich hervorgehoben. 
 
-Durch einen Klick auf den "="-Button kann sich der Nutzer das Ergebnis der entsprechenden Rechnung anzeigen lassen. Die Koeffizienten des Erebnisses werden zusätzlich auf zwei Nachkommastellen gerundet, um eine übersichtliche Ausgabe zu ermöglichen. 
+Durch einen Klick auf den "="-Button kann sich der Nutzer das Ergebnis der entsprechenden Rechnung anzeigen lassen. Die Koeffizienten des Erebnisses werden zusätzlich auf zwei Dezimalstellen angegeben, um eine übersichtliche Ausgabe zu ermöglichen. 
 
 Es gibt zusätzlich eine Besonderheit für die Division. Da die Multiplikation für Quaternionen nicht kommutativ ist, sind die Rechnungen q*p^{-1} und p^{-1}*q nicht äquivalent. Aus diesem Grund erscheinen bei der Auswahl der Rechenoperation Division zwei Buttons mit diesen beiden Optionen. Der Nutzer entscheidet sich für eine der beiden Optionen, die dann farblich markiert wird. 
 
@@ -16,7 +16,10 @@ Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist 
 - [x] Die Eingabefelder sind so eingestellt, dass man in sie lediglich Zahlen und höchstens einen Punkt eingeben kann
 
 Hier einige Screenshots der Seite: 
-...
+
+<img src="https://user-images.githubusercontent.com/56199607/92325235-3de63f80-f049-11ea-80d0-57c23dc64987.png" width="200"> .
+<img src="https://user-images.githubusercontent.com/56199607/92325372-4b4ff980-f04a-11ea-94d2-30078ac8d7d3.png" width="200">
+
 
 # Calculator for quaternions
 English version
