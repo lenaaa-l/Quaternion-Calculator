@@ -43,7 +43,7 @@ Hier ein Screenshot der Seite:
 ## Rotation (Rotation) 
 Der Nutzer gibt einen Punkt im dreidimensionalen Koordinatensystem, eine Rotationsachse, um die der Punkt gedreht werden soll (als dreidimensionaler Vektor) und den Winkel in Grad, um den der Punkt gegen den Uhrzeigersinn gedreht werden soll an. Durch einen Klick auf den Häckchen-Button bekommt der Nutzer die Koordinaten des neuen Punkts P' ausgegeben. 
 
-Für die Rechnung wird als Rotationsachse ein normierter Vektor benötigt. Aus diesem Grund wird als erster Schritt der eingegebene Vektor normiert. Anschließend wird der passende Rotationsoperator r ausgerechnet und der eingegebene Punkt P(x; y; z) als Quaternion q = xi + yj + zk dargestellt. Die Multiplikation r*q*r^{-1} liefert dann das Quaternion p' = x'i + y'j + z'k. Dies entspricht dem Ergebnispunkt P'(x'; y'; z').
+Für die Rechnung wird als Rotationsachse ein normierter Vektor benötigt. Aus diesem Grund wird als erster Schritt der eingegebene Vektor normiert. Anschließend wird der passende Rotationsoperator r ausgerechnet und der eingegebene Punkt P(x; y; z) als Quaternion q = xi + yj + zk dargestellt. Die Multiplikation r*q*r^{-1} liefert dann das Quaternion p' = x'i + y'j + z'k. Dies entspricht dem Ergebnispunkt P'(x'; y'; z'). Die Koordinaten x', y' und z' werden aus Gründen der Übersichtlichkeit auf zwei Dezimalstellen genau angegeben. 
 
 Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist diese Seite folgendermaßen:
 - [x] Es wird auf leere Eingabefelder geprüft und diese mit "0.0" gefüllt (alle Eingabefelder)
