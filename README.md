@@ -52,6 +52,8 @@ Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist 
 
 Hier ein Screenshot der Seite:
 
+<img src="https://user-images.githubusercontent.com/56199607/92326978-7fc9b280-f056-11ea-8e56-714bb1e02133.png" width="200">
+
 
 # Calculator for quaternions
 English version
