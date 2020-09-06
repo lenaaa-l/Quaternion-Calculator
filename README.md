@@ -1,7 +1,7 @@
 # Taschenrechner für Quaternionen 
 Die Taschenrechner-App besteht aus drei Reitern, die in der Navigationsleiste aufgelistet sind: Elementary Arithmetic (Grundrechenarten), Features (Eigenschaften) und Rotation (Rotation). Bewusst wurde die App auf Englisch geschrieben, damit sie international genutzt werden kann. Das bedeutet auch, dass anstelle von Kommas bei Dezimalzahlen ein Punkt verwendet wird. Jeder Reiter deckt also unterschiedliche Themengebiete ab. Die einzelnen Inhalte werden im Folgenden genauer erläutert.
 ## Grundrechenoperationen (Elementary Arithmetic) 
-Der Nutzer gibt zwei Quaternionen ein. Dabei sind die Koeffizienten double-Werte, das heißt Fließkommazahlen. 
+Der Nutzer gibt zwei Quaternionen ein. Dabei sind die Koeffizienten double Werte, das heißt Fließkommazahlen. 
 Anschließend wählt der Nutzer eine Rechenoperation aus. Der Button zur ausgewählten Operation wird farblich hervorgehoben. 
 
 Durch einen Klick auf den "="-Button kann sich der Nutzer das Ergebnis der entsprechenden Rechnung anzeigen lassen. Die Koeffizienten des Erebnisses werden zusätzlich auf zwei Dezimalstellen angegeben, um eine übersichtliche Ausgabe zu ermöglichen. 
@@ -9,7 +9,7 @@ Durch einen Klick auf den "="-Button kann sich der Nutzer das Ergebnis der entsp
 Es gibt zusätzlich eine Besonderheit für die Division. Da die Multiplikation für Quaternionen nicht kommutativ ist, sind die Rechnungen q*p^{-1} und p^{-1}*q nicht äquivalent. Aus diesem Grund erscheinen bei der Auswahl der Rechenoperation Division zwei Buttons mit diesen beiden Optionen. Der Nutzer entscheidet sich für eine der beiden Optionen, die dann farblich markiert wird. 
 
 Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist diese Seite folgendermaßen: 
-- [x] Es wird auf leere Eingabefelder überprüft und diese mit "0.0" gefüllt
+- [x] Es wird auf leere Eingabefelder geprüft und diese mit "0.0" gefüllt
 - [x] Wurde keine Rechenoperation ausgewählt, wird der Nutzer darauf hingewiesen, dass er zuerst eine Rechenoperation auswählen muss 
 - [x] Wurde bei der Division keine Option ausgewählt, wird der Nutzer auch darauf hingewiesen
 - [x] Die zwei verschiedenen Buttons für die Division sind nur sichtbar, wenn die Division als Rechenoperation ausgewählt wurde
@@ -19,6 +19,24 @@ Hier einige Screenshots der Seite:
 
 <img src="https://user-images.githubusercontent.com/56199607/92325235-3de63f80-f049-11ea-80d0-57c23dc64987.png" width="200"> .
 <img src="https://user-images.githubusercontent.com/56199607/92325372-4b4ff980-f04a-11ea-94d2-30078ac8d7d3.png" width="200">
+
+## Eigenschaften (Features)
+Der Nutzer gibt ein Quaternion ein. Dabei sind die Koeffizienten erneut double Werte. Anschließend bestätigt der Nutzer seine Auswahl durch einen Klick auf den Button mit den Häckchen. 
+Es werden folgende Eigenschaften ausgegeben 
+- Realteil 
+- Imaginärteil 
+- Konjugiertes 
+- Betrag/Länge
+- Inverses 
+- Normiertes Quaternion
+
+Die Koeffizienten des Konjugierten, des Inversen und des normierten Quaternions werden auf zwei Dezimalstellen angegeben, der Betrag (zur Erhöhung der Genauigkeit) auf 5. 
+
+Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist diese Seite folgendermaßen:
+- [x] Es wird auf leere Eingabefelder geprüft und diese mit "0.0" gefüllt
+
+Hier ein Screenshot der Seite:
+
 
 
 # Calculator for quaternions
