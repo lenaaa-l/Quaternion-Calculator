@@ -78,7 +78,7 @@ public class QuaternionOperation {
      * @param q     Quaternion of the point to be rotated
      * @param r     Rotation axis
      * @param alpha angle in degrees
-     * @return
+     * @return quaternion caused by rotation
      */
     public static Quaternion rotate(Quaternion q, Vector<Double> r, final double alpha) {
         Quaternion rotation_operator = getRotationOperator(q, r, alpha);
