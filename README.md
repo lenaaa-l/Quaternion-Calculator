@@ -1,5 +1,5 @@
 # Taschenrechner für Quaternionen 
-Die Taschenrechner-App besteht aus drei Reitern, die in der Navigationsleiste aufgelistet sind: Elementary Arithmetic (Grundrechenarten), Features (Eigenschaften) und Rotation (Rotation). Bewusst wurde die App auf Englisch geschrieben, damit sie international genutzt werden kann. Das bedeutet auch, dass anstelle von Kommas bei Dezimalzahlen ein Punkt verwendet wird. Jeder Reiter deckt also unterschiedliche Themengebiete ab. Die einzelnen Inhalte werden im Folgenden genauer erläutert.
+Die Taschenrechner-App besteht aus drei Reitern, die in der Navigationsleiste aufgelistet sind: Elementary Arithmetic (Grundrechenarten), Features (Eigenschaften) und Rotation (Rotation). Jeder Reiter deckt also unterschiedliche Themengebiete ab. Die einzelnen Inhalte werden im Folgenden genauer erläutert. Bewusst wurde die App auf Englisch geschrieben, damit sie international genutzt werden kann. Das bedeutet auch, dass anstelle von Kommas bei Dezimalzahlen ein Punkt verwendet wird.
 ## Grundrechenoperationen (Elementary Arithmetic) 
 Der Sourcecode für diesen Reiter findet sich [hier](https://github.com/lenaaa-l/Quaternion-Calculator/blob/master/app/src/main/java/com/example/quaternion_calculator/ui/elementary_arithmetic/ElementaryArithmeticFragment.java).
 
