@@ -25,16 +25,16 @@ Hier einige Screenshots der Seite:
 ## Eigenschaften (Features)
 Der Sourcecode für diesen Reiter findet sich [hier](https://github.com/lenaaa-l/Quaternion-Calculator/blob/master/app/src/main/java/com/example/quaternion_calculator/ui/features/FeaturesFragment.java).
 
-Der Nutzer gibt ein Quaternion ein. Dabei sind die Koeffizienten erneut double Werte. Anschließend bestätigt der Nutzer seine Auswahl durch einen Klick auf den Button mit den Häckchen. 
+Der Nutzer gibt eine Quaternion ein. Dabei sind die Koeffizienten erneut double Werte. Anschließend bestätigt der Nutzer seine Auswahl durch einen Klick auf den Button mit den Häckchen. 
 Es werden folgende Eigenschaften ausgegeben 
 - Realteil 
 - Imaginärteil 
 - Konjugiertes 
 - Betrag/Länge
 - Inverses 
-- Normiertes Quaternion
+- Normierte Quaternion
 
-Die Koeffizienten des Konjugierten, des Inversen und des normierten Quaternions werden auf zwei Dezimalstellen angegeben, der Betrag (zur Erhöhung der Genauigkeit) auf 5. 
+Die Koeffizienten des Konjugierten, des Inversen und der normierten Quaternion werden auf zwei Dezimalstellen angegeben, der Betrag (zur Erhöhung der Genauigkeit) auf 5. 
 
 Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist diese Seite folgendermaßen:
 - [x] Es wird auf leere Eingabefelder geprüft und diese mit "0.0" gefüllt
@@ -49,7 +49,7 @@ Der Sourcecode für diesen Reiter befindet sich [hier](https://github.com/lenaaa
 
 Der Nutzer gibt einen Punkt im dreidimensionalen Koordinatensystem, eine Rotationsachse, um die der Punkt gedreht werden soll (als dreidimensionaler Vektor) und den Winkel in Grad, um den der Punkt gegen den Uhrzeigersinn gedreht werden soll an. Durch einen Klick auf den Häckchen-Button bekommt der Nutzer die Koordinaten des neuen Punkts P' ausgegeben. 
 
-Für die Rechnung wird als Rotationsachse ein normierter Vektor benötigt. Aus diesem Grund wird als erster Schritt der eingegebene Vektor normiert. Anschließend wird der passende Rotationsoperator r ausgerechnet und der eingegebene Punkt P(x; y; z) als Quaternion q = xi + yj + zk dargestellt. Die Multiplikation r*q*r^{-1} liefert dann das Quaternion p' = x'i + y'j + z'k. Dies entspricht dem Ergebnispunkt P'(x'; y'; z'). Die Koordinaten x', y' und z' werden aus Gründen der Übersichtlichkeit auf zwei Dezimalstellen genau angegeben. 
+Für die Rechnung wird als Rotationsachse ein normierter Vektor benötigt. Aus diesem Grund wird als erster Schritt der eingegebene Vektor normiert. Anschließend wird der passende Rotationsoperator r ausgerechnet und der eingegebene Punkt P(x; y; z) als Quaternion q = xi + yj + zk dargestellt. Die Multiplikation r*q*r^{-1} liefert dann die Quaternion p' = x'i + y'j + z'k. Dies entspricht dem Ergebnispunkt P'(x'; y'; z'). Die Koordinaten x', y' und z' werden aus Gründen der Übersichtlichkeit auf zwei Dezimalstellen genau angegeben. 
 
 Abgesichert vor Fehlern durch eine falsche/nicht ausreichende Nutzereingabe ist diese Seite folgendermaßen:
 - [x] Es wird auf leere Eingabefelder geprüft und diese mit "0.0" gefüllt (alle Eingabefelder)
